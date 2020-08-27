@@ -80,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
     private void MyInput()
     {
         jumping = joybutton.Pressed;
+        if (joybutton.Pressed) Debug.Log("JumpButtonWorking");
         x = joystick.Horizontal;
         y = joystick.Vertical;
         crouching = Input.GetKey(KeyCode.LeftShift);
@@ -202,7 +203,10 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector3(vel.x, 0, vel.z);
             else if (rb.velocity.y > 0)
                 rb.velocity = new Vector3(vel.x, vel.y / 2, vel.z);
-    }
+
+            Invoke("ResetJump", 0.2f);
+        }
+
         if (!grounded){
             readyToJump = false;
 
@@ -214,8 +218,11 @@ public class PlayerMovement : MonoBehaviour
             //Reset Velocity
             rb.velocity = Vector3.zero;
         }
-        }
-
+    }
+    void ResetJump()
+    {
+        readyToJump = true;
+    }
 
     private float desiredX;
 
@@ -289,7 +296,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //Make sure we are only checking for walkable layers
         int layer = other.gameObject.layer;
-        if (whatIsGround != (whatIsGround | (1 << layer))) return;
+        //if (whatIsGround != (whatIsGround | (1 << layer))) return;
 
         //Iterate through every collision in a physics update
         for (int i = 0; i < other.contactCount; i++)
