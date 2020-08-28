@@ -41,15 +41,15 @@ public class ShootingAiTut : MonoBehaviour
     {
         if (!isDead)
         {
+            if (!playerInSightRange && !playerInAttackRange) Patroling();
+            if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+            if (playerInAttackRange && playerInSightRange) AttackPlayer();
+
             //Check if Player in sightrange
             playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
 
             //Check if Player in attackrange
             playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-
-            if (!playerInSightRange && !playerInAttackRange) Patroling();
-            if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-            if (playerInAttackRange && playerInSightRange) AttackPlayer();
         }
     }
 
@@ -62,9 +62,6 @@ public class ShootingAiTut : MonoBehaviour
         //Calculate direction and walk to Point
         if (walkPointSet){
             agent.SetDestination(walkPoint);
-
-            //Vector3 direction = walkPoint - transform.position;
-            //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.15f);
         }
 
         //Calculates DistanceToWalkPoint
@@ -73,8 +70,6 @@ public class ShootingAiTut : MonoBehaviour
         //Walkpoint reached
         if (distanceToWalkPoint.magnitude < 1f)
             walkPointSet = false;
-
-        
     }
     private void SearchWalkPoint()
     {
@@ -91,8 +86,6 @@ public class ShootingAiTut : MonoBehaviour
         if (isDead) return;
 
         agent.SetDestination(player.position);
-
-        
     }
     
     public Transform attackPosition;
@@ -126,7 +119,20 @@ public class ShootingAiTut : MonoBehaviour
 
         alreadyAttacked = false;
     }
- 
 
-   
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        //if health drops below 0, destroy Enemy
+        if (health <= 0) Destroy(gameObject);
+    }
+
+    public void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, sightRange);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
 }

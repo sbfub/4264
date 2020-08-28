@@ -65,7 +65,7 @@ public class CustomBullet : MonoBehaviour
             //Get component of enemy and call Take Damage
 
             //Just an example!
-            ///enemies[i].GetComponent<ShootingAi>().TakeDamage(explosionDamage);
+            enemies[i].GetComponent<EnemyAiTutorial>().TakeDamage(explosionDamage);
 
             //Add explosion force (if enemy has a rigidbody)
             if (enemies[i].GetComponent<Rigidbody>())
@@ -83,7 +83,7 @@ public class CustomBullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Don't count collisions with other bullets
-        if (collision.collider.CompareTag("Bullet")) return;
+        //if (collision.collider.CompareTag("Bullet")) return;
 
         //Count up collisions
         collisions++;
@@ -117,9 +117,4 @@ public class CustomBullet : MonoBehaviour
     {
         Destroy(gameObject, lifetime);
     }
-
-  
-
-
-
 }
