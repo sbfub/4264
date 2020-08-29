@@ -1,6 +1,5 @@
-﻿
-using UnityEngine;
-using TMPro;
+﻿using UnityEngine;
+
 
 /// Thanks for downloading my projectile gun script! :D
 /// Feel free to use it in any project you like!
@@ -42,9 +41,8 @@ public class ProjectileGunTutorial : MonoBehaviour
     public Camera fpsCam;
     public Transform attackPoint;
 
-    //Graphics
-    public GameObject muzzleFlash;
-    public TextMeshProUGUI ammunitionDisplay;
+    
+    
 
     //bug fixing :D
     public bool allowInvoke = true;
@@ -59,10 +57,6 @@ public class ProjectileGunTutorial : MonoBehaviour
     private void Update()
     {
         MyInput();
-
-        //Set ammo display, if it exists :D
-        if (ammunitionDisplay != null)
-            ammunitionDisplay.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
     }
     private void MyInput()
     {
@@ -119,11 +113,8 @@ public class ProjectileGunTutorial : MonoBehaviour
         currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * upwardForce, ForceMode.Impulse);
 
         //Instantiate muzzle flash, if you have one
-        if (muzzleFlash != null)
-            Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+       
 
-        bulletsLeft--;
-        bulletsShot++;
 
         //Invoke resetShot function (if not already invoked), with your timeBetweenShooting
         if (allowInvoke)

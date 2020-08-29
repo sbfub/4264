@@ -1189,7 +1189,7 @@ PrefabInstance:
     - target: {fileID: 1255457422888368309, guid: 38ae6458937b5084db878b1e71ff84ae,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1255457422888368309, guid: 38ae6458937b5084db878b1e71ff84ae,
         type: 3}
@@ -1825,7 +1825,7 @@ PrefabInstance:
     - target: {fileID: 366739167361823253, guid: 3435da8f413bfb146b64318e3a9419fd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 366739167361823253, guid: 3435da8f413bfb146b64318e3a9419fd,
         type: 3}
@@ -4025,7 +4025,7 @@ PrefabInstance:
     - target: {fileID: 2549630017404160129, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2549630017404160129, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
         type: 3}
@@ -4139,6 +4139,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TogglePauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 2549630018435633877, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549630018435633877, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549630018435633877, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2549630018727688302, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4148,6 +4163,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549630018727688302, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549630018727688302, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549630018727688302, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2549630019035385913, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
         type: 3}
@@ -4246,6 +4276,53 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 541a6043b2549db409fb519eefccf49b,
         type: 3}
+    - target: {fileID: 2549630019217706024, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549630019217706024, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Resume
+
+        Game'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549630019217706024, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549630019217706024, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549630019217706024, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549630019304171282, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549630019304171282, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549630019304171282, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549630019304171282, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ad096c0f6d07354fa7f6ac0f1753a80, type: 3}
 --- !u!114 &1407372209 stripped
@@ -6109,7 +6186,7 @@ PrefabInstance:
     - target: {fileID: 6138175230657038954, guid: b5a4b4bea16f5c34f980d5e26a873ea2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6138175230657038954, guid: b5a4b4bea16f5c34f980d5e26a873ea2,
         type: 3}
