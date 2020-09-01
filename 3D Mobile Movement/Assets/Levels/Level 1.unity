@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.30141336, g: 0.38199812, b: 0.58827734, a: 1}
+  m_IndirectSpecularColor: {r: 0.3014134, g: 0.38199806, b: 0.58827716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8093,6 +8093,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pistol
       objectReference: {fileID: 0}
+    - target: {fileID: 414280888282378264, guid: dc5b6881bb6f3c34ebb4b114fe9b7e72,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 414280888282378264, guid: dc5b6881bb6f3c34ebb4b114fe9b7e72,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 414280888282378264, guid: dc5b6881bb6f3c34ebb4b114fe9b7e72,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 414280888282378265, guid: dc5b6881bb6f3c34ebb4b114fe9b7e72,
         type: 3}
       propertyPath: joyButton
@@ -8325,6 +8340,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 848033049790824420, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 848033049790824422, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
         type: 3}
       propertyPath: m_Color.r
@@ -8339,6 +8359,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 848033049790824424, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+        type: 3}
+      propertyPath: axisOptions
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2549630017404160129, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
         type: 3}
@@ -8871,22 +8896,22 @@ PrefabInstance:
     - target: {fileID: 6138175230657038954, guid: b5a4b4bea16f5c34f980d5e26a873ea2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0006890901
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6138175230657038954, guid: b5a4b4bea16f5c34f980d5e26a873ea2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7028837
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6138175230657038954, guid: b5a4b4bea16f5c34f980d5e26a873ea2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0024107236
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6138175230657038954, guid: b5a4b4bea16f5c34f980d5e26a873ea2,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7113004
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6138175230657038954, guid: b5a4b4bea16f5c34f980d5e26a873ea2,
         type: 3}
@@ -8896,17 +8921,17 @@ PrefabInstance:
     - target: {fileID: 6138175230657038954, guid: b5a4b4bea16f5c34f980d5e26a873ea2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6138175230657038954, guid: b5a4b4bea16f5c34f980d5e26a873ea2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 89.318
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6138175230657038954, guid: b5a4b4bea16f5c34f980d5e26a873ea2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.141
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6138175230657038956, guid: b5a4b4bea16f5c34f980d5e26a873ea2,
         type: 3}
@@ -8937,6 +8962,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxSlopeAngle
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138175230657038959, guid: b5a4b4bea16f5c34f980d5e26a873ea2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5a4b4bea16f5c34f980d5e26a873ea2, type: 3}
@@ -9097,6 +9127,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 234732335}
+    - target: {fileID: 4392485907709722156, guid: 75eb4353dcc6b3948b754a8ece9da295,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392485907709722156, guid: 75eb4353dcc6b3948b754a8ece9da295,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392485907709722156, guid: 75eb4353dcc6b3948b754a8ece9da295,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392485907709722156, guid: 75eb4353dcc6b3948b754a8ece9da295,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4392485907709722158, guid: 75eb4353dcc6b3948b754a8ece9da295,
         type: 3}
       propertyPath: joyButton

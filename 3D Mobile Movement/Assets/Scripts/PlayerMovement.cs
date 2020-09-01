@@ -183,6 +183,8 @@ public class PlayerMovement : MonoBehaviour
         //Apply forces to move player
         rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * multiplier * multiplierV);
         rb.AddForce(orientation.transform.right * x * moveSpeed * Time.deltaTime * multiplier);
+
+        //orientation.rotation = Quaternion.Euler(0, orientation.eulerAngles.y, orientation.eulerAngles.z);
     }
 
     private void Jump()
@@ -230,7 +232,7 @@ public class PlayerMovement : MonoBehaviour
     private float Y;
     private void Look()
     {
-        orientation.LookAt(new Vector3(lookThere.position.x, 0, lookThere.position.z));
+        //orientation.LookAt(new Vector3(lookThere.position.x, 0, lookThere.position.z));
     }
     private void CounterMovement(float x, float y, Vector2 mag)
     {

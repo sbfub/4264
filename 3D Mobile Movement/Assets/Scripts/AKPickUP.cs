@@ -21,17 +21,19 @@ public class AKPickUP : MonoBehaviour
 
     private void Start()
     {
+        rb.isKinematic = false;
+
         //Setup
         if (!equipped)
         {
             gunScript.enabled = false;
-            rb.isKinematic = false;
+            rb.useGravity = true;
             coll.isTrigger = false;
         }
         if (equipped)
         {
             gunScript.enabled = true;
-            rb.isKinematic = true;
+            rb.useGravity = false;
             coll.isTrigger = true;
             slotFull = true;
         }
@@ -73,7 +75,7 @@ public class AKPickUP : MonoBehaviour
         transform.localScale = Vector3.one;
 
         //Make Rigidbody kinematic and BoxCollider a trigger
-        rb.isKinematic = true;
+        rb.useGravity = false;
         coll.isTrigger = true;
 
         //Enable script
@@ -89,7 +91,7 @@ public class AKPickUP : MonoBehaviour
         transform.SetParent(null);
 
         //Make Rigidbody not kinematic and BoxCollider normal
-        rb.isKinematic = false;
+        rb.useGravity = true;
         coll.isTrigger = false;
 
         //Gun carries momentum of player

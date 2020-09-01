@@ -95,9 +95,10 @@ public class ShootingAiTut : MonoBehaviour
         if (isDead) return;
 
         //Make sure enemy doesn't move
-        agent.SetDestination(attackPosition.position);
+        agent.SetDestination(transform.position);
 
-        attackPosition.LookAt(player);
+        transform.LookAt(new Vector3(player.position.x, transform.position.y, player.position.z));
+        attackPosition.LookAt(new Vector3(player.position.x, transform.position.y - -.1f, player.position.z));
 
         if (!alreadyAttacked){
 
