@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {  
-    [SerializeField]
-    public float lives = 1f;
-
-
-    void OnTriggerEnter(Collider other)
+    private int health = 1; 
+    
+    private void OnTriggerEnter3D(Collider collision)
     {
-        if (other.tag == "Enemy")
+        if(collision.CompareTag("Bullet"))
         {
-            lives--;
-        }
-               
-        if (lives == 0) 
-        {
-            Destroy(other.gameObject); 
-        }
+            Destroy(collision.gameObject); 
 
+            health--;
+            
+            if (health <= 0)
+            Destroy(gameObject); 
+        }
     }
 }

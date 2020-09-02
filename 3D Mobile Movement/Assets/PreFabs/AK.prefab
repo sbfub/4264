@@ -170,7 +170,6 @@ GameObject:
   - component: {fileID: 6491452473871304539}
   - component: {fileID: 9162575301343235502}
   - component: {fileID: 8081108919346259782}
-  - component: {fileID: 8639944346108107277}
   - component: {fileID: 783495481610601550}
   m_Layer: 8
   m_Name: AK
@@ -273,7 +272,7 @@ TrailRenderer:
   m_Time: 0.69
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.15262131
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -327,34 +326,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &8639944346108107277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8128140982385059670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b872d31ee3107642a75423ad8836710, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifetime: 3
-  damage: 50
-  rb: {fileID: 9162575301343235502}
-  explosion: {fileID: 0}
-  whatIsEnemies:
-    serializedVersion: 2
-    m_Bits: 2048
-  lives: 1
-  bounciness: 1
-  useGravity: 0
-  explosionDamage: 40
-  explosionRange: 1
-  explosionForce: 0
-  maxCollisions: 1
-  maxLifetime: 10
-  explodeOnTouch: 1
 --- !u!135 &783495481610601550
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -26,9 +26,9 @@ public class EnemyAiTutorial : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
-    private void Start()
+    private void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        player = GameObject.Find("PlayerObj").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -73,8 +73,6 @@ public class EnemyAiTutorial : MonoBehaviour
         agent.SetDestination(player.position);
     }
 
-    public Transform attackPosition; 
-
     private void AttackPlayer()
     {
         //Make sure enemy doesn't move
@@ -85,7 +83,7 @@ public class EnemyAiTutorial : MonoBehaviour
         if (!alreadyAttacked)
         {
             ///Attack code here
-            Rigidbody rb = Instantiate(projectile, attackPosition.position, Quaternion.identity).GetComponent<Rigidbody>();
+            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
             ///End of attack code
@@ -110,5 +108,11 @@ public class EnemyAiTutorial : MonoBehaviour
         Destroy(gameObject);
     }
 
-  
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
 }
