@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.30141336, g: 0.38199812, b: 0.58827734, a: 1}
+  m_IndirectSpecularColor: {r: 0.3014134, g: 0.38199806, b: 0.58827716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3277,8 +3277,8 @@ MonoBehaviour:
   bullet: {fileID: 8128140982385059670, guid: 6dee275edaf0db3439707398e12fd5f4, type: 3}
   shootForce: 300
   upwardForce: 0
-  timeBetweenShooting: 0.5
-  spread: 3
+  timeBetweenShooting: 0.1
+  spread: 0.5
   reloadTime: 0.2
   timeBetweenShots: 1
   magazineSize: 100
@@ -8612,6 +8612,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timeBetweenShots
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 414280888282378270, guid: dc5b6881bb6f3c34ebb4b114fe9b7e72,
+        type: 3}
+      propertyPath: spread
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535511598782818733, guid: dc5b6881bb6f3c34ebb4b114fe9b7e72,
         type: 3}
