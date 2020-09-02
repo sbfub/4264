@@ -6,7 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {  
     private int health = 1; 
     
-    private void OnTriggerEnter3D(Collider collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if(collision.CompareTag("Bullet"))
         {
