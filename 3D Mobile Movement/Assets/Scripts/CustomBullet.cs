@@ -14,7 +14,7 @@ public class CustomBullet : MonoBehaviour
     public float lifetime = 1.0f;
     public int damage = 50;
     public Rigidbody rb;
-    public GameObject explosion;
+    
     public LayerMask whatIsEnemies;
     [SerializeField]
     public float lives = 1f;
@@ -42,54 +42,14 @@ public class CustomBullet : MonoBehaviour
         Setup();
     }
 
-    private void Update()
-    {
-        //When to explode:
-        if (collisions > maxCollisions) Explode();
+   
 
-        //Count down lifetime
-        maxLifetime -= Time.deltaTime;
-        if (maxLifetime <= 0) Explode();
-    }
-
-    private void Explode()
-    {
-        //Instantiate explosion
-        if (explosion != null) Instantiate(explosion, transform.position, Quaternion.identity);
-
-        //Check for enemies 
-        Collider[] enemies = Physics.OverlapSphere(transform.position, explosionRange, whatIsEnemies);
-        for (int i = 0; i < enemies.Length; i++)
-        {
-            if (enemies[0] != null)
-                Debug.Log("enemyHit");
-
-            enemies[i].GetComponent<EnemyAiTutorial>().TakeDamage(explosionDamage);
-
-            //Add explosion force (if enemy has a rigidbody)
-            if (enemies[i].GetComponent<Rigidbody>())
-                enemies[i].GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRange);
-        }
-
-        //Add a little delay, just to make sure everything works fine
-        Invoke("Delay", 0.05f);
-    }
     private void Delay()
     {
         Destroy(gameObject);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        //Don't count collisions with other bullets
-        if (collision.collider.CompareTag("Bullet")) return;
 
-        //Count up collisions
-        collisions++;
-
-        //Explode if bullet hits an enemy directly and explodeOnTouch is activated
-        if (collision.collider.CompareTag("Enemy") && explodeOnTouch) Explode();
-    }
 
     private void Setup()
     {
