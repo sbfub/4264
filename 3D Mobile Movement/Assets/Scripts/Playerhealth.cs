@@ -1,21 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Playerhealth : MonoBehaviour
-{  
-    private int health = 1; 
-    
-    private void OnTriggerEnter(Collider collision)
-    {
-        if(collision.CompareTag("EnemyBullet"))
-        {
-            Destroy(collision.gameObject); 
+{
+   public GameObject player;
+   public GameObject panel;
+   private int health = 1; 
 
-            health--;
-            
-            if (health <= 0)
-            Destroy(gameObject); 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            player.SetActive(false);
+            panel.SetActive (true);
+            Destroy(other.gameObject);
         }
+        
     }
 }

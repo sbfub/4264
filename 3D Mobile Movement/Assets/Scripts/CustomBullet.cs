@@ -42,14 +42,6 @@ public class CustomBullet : MonoBehaviour
         Setup();
     }
 
-   
-
-    private void Delay()
-    {
-        Destroy(gameObject);
-    }
-
-
 
     private void Setup()
     {
@@ -65,10 +57,9 @@ public class CustomBullet : MonoBehaviour
         rb.useGravity = useGravity;
     }
 
-    /// Just to visualize the explosion range
-    private void OnDrawGizmosSelected()
+    void OnCollisionEnter(Collision collision)
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, explosionRange);
+        Destroy(gameObject); 
     }
+   
 }

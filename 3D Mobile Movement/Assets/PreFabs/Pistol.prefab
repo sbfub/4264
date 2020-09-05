@@ -273,7 +273,7 @@ TrailRenderer:
   m_Time: 0.69
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.2
+    widthMultiplier: 0.4
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -342,7 +342,6 @@ MonoBehaviour:
   lifetime: 3
   damage: 50
   rb: {fileID: 6618201379897079137}
-  explosion: {fileID: 0}
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 1024
