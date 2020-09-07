@@ -6801,7 +6801,17 @@ PrefabInstance:
     - target: {fileID: 414280888282378264, guid: dc5b6881bb6f3c34ebb4b114fe9b7e72,
         type: 3}
       propertyPath: m_Constraints
-      value: 126
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 414280888282378264, guid: dc5b6881bb6f3c34ebb4b114fe9b7e72,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 414280888282378264, guid: dc5b6881bb6f3c34ebb4b114fe9b7e72,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 414280888282378265, guid: dc5b6881bb6f3c34ebb4b114fe9b7e72,
         type: 3}

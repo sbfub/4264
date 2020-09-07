@@ -3,28 +3,26 @@ using UnityEngine;
 public class GrapplingGun : MonoBehaviour {
 
     
-    public joybutton2 joybutton;
+
     private LineRenderer lr;
     private Vector3 grapplePoint;
     public LayerMask whatIsGrappleable;
     public Transform gunTip, camera, player;
     private float maxDistance = 100f;
     private SpringJoint joint;
-    
 
     void Awake() {
         lr = GetComponent<LineRenderer>();
     }
 
     void Update() {
-        if (joybutton.Pressed) {
+        if (Input.GetMouseButtonDown(0)) {
             StartGrapple();
         }
-        else if (!joybutton.Pressed) {
+        else if (Input.GetMouseButtonUp(0)) {
             StopGrapple();
         }
     }
-
     //Called after Update
     void LateUpdate() {
         DrawRope();
