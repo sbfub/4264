@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GrapplingGun : MonoBehaviour {
 
-    
+    public joybutton2 mobileButton;
 
     private LineRenderer lr;
     private Vector3 grapplePoint;
@@ -15,11 +15,14 @@ public class GrapplingGun : MonoBehaviour {
         lr = GetComponent<LineRenderer>();
     }
 
+    bool alreadyStarted = false;
     void Update() {
-        if (Input.GetMouseButtonDown(0)) {
+        if (mobileButton.Pressed && !alreadyStarted) {
             StartGrapple();
+            alreadyStarted = true;
         }
-        else if (Input.GetMouseButtonUp(0)) {
+        if (!mobileButton.Pressed && alreadyStarted) {
+            alreadyStarted = false;
             StopGrapple();
         }
     }

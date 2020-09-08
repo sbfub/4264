@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.30141336, g: 0.38199812, b: 0.58827734, a: 1}
+  m_IndirectSpecularColor: {r: 0.3014134, g: 0.38199806, b: 0.58827716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9513,12 +9513,12 @@ PrefabInstance:
     - target: {fileID: 414280888282378264, guid: dc5b6881bb6f3c34ebb4b114fe9b7e72,
         type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 414280888282378264, guid: dc5b6881bb6f3c34ebb4b114fe9b7e72,
         type: 3}
       propertyPath: m_Interpolate
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 414280888282378264, guid: dc5b6881bb6f3c34ebb4b114fe9b7e72,
         type: 3}
@@ -9727,7 +9727,7 @@ PrefabInstance:
     - target: {fileID: 487098792241020582, guid: 625d077aca13114418e56fa63ce94781,
         type: 3}
       propertyPath: m_Interpolate
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 487098792241020582, guid: 625d077aca13114418e56fa63ce94781,
         type: 3}
@@ -9742,7 +9742,7 @@ PrefabInstance:
     - target: {fileID: 487098792241020582, guid: 625d077aca13114418e56fa63ce94781,
         type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 625d077aca13114418e56fa63ce94781, type: 3}
@@ -10712,12 +10712,12 @@ PrefabInstance:
     - target: {fileID: 2605953028854354424, guid: 9aebe630e6a78664596164b7794018e8,
         type: 3}
       propertyPath: m_Interpolate
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2605953028854354424, guid: 9aebe630e6a78664596164b7794018e8,
         type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 5682083984797332603, guid: 9aebe630e6a78664596164b7794018e8,
         type: 3}
@@ -10973,6 +10973,11 @@ PrefabInstance:
       propertyPath: joybutton
       value: 
       objectReference: {fileID: 1100267840}
+    - target: {fileID: 4392485907709722155, guid: 75eb4353dcc6b3948b754a8ece9da295,
+        type: 3}
+      propertyPath: mobileButton
+      value: 
+      objectReference: {fileID: 1100267840}
     - target: {fileID: 4392485907709722156, guid: 75eb4353dcc6b3948b754a8ece9da295,
         type: 3}
       propertyPath: m_UseGravity
@@ -10981,7 +10986,7 @@ PrefabInstance:
     - target: {fileID: 4392485907709722156, guid: 75eb4353dcc6b3948b754a8ece9da295,
         type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 4392485907709722156, guid: 75eb4353dcc6b3948b754a8ece9da295,
         type: 3}
@@ -10991,7 +10996,7 @@ PrefabInstance:
     - target: {fileID: 4392485907709722156, guid: 75eb4353dcc6b3948b754a8ece9da295,
         type: 3}
       propertyPath: m_Interpolate
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4392485907709722156, guid: 75eb4353dcc6b3948b754a8ece9da295,
         type: 3}
