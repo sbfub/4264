@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1397171917599254988}
   - component: {fileID: 1279754509487914369}
   - component: {fileID: 2618342502995594285}
-  - component: {fileID: 3929692474226219333}
   - component: {fileID: 1138236486991832901}
   m_Layer: 8
   m_Name: EnemyBullet
@@ -197,18 +196,6 @@ MonoBehaviour:
   maxCollisions: 1
   maxLifetime: 2
   explodeOnTouch: 1
---- !u!114 &3929692474226219333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2278295465608162861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 531a2f4c8cedb834fafe200743990d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &1138236486991832901
 SphereCollider:
   m_ObjectHideFlags: 0

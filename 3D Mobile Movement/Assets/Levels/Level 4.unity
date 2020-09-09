@@ -127,6 +127,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 516867836}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &43080071 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2549630017571939076, guid: 1ad096c0f6d07354fa7f6ac0f1753a80,
+    type: 3}
+  m_PrefabInstance: {fileID: 516867836}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa40b4ef46d33f44a879366c4b6120c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &140989734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -564,6 +576,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1094015709}
+    - target: {fileID: 4392485907709722155, guid: 75eb4353dcc6b3948b754a8ece9da295,
+        type: 3}
+      propertyPath: mobileButton
+      value: 
+      objectReference: {fileID: 43080071}
     - target: {fileID: 4392485907709722156, guid: 75eb4353dcc6b3948b754a8ece9da295,
         type: 3}
       propertyPath: m_Constraints

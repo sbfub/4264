@@ -1,19 +1,14 @@
 ﻿using UnityEngine;
 
 public class Playerhealth : MonoBehaviour
+{ 
+void OnCollisionEnter(Collision other)
 {
-   public GameObject player;
-   public GameObject panel;
-   private int health = 1; 
-
-    private void OnTriggerEnter(Collider other)
+    if(other.gameObject.CompareTag("EnemyBullet"))
     {
-        if(other.CompareTag("Player"))
-        {
-            player.SetActive(false);
-            panel.SetActive (true);
-            Destroy(other.gameObject);
-        }
-        
+        Debug.Log("shit"); 
+        Destroy(gameObject);
+        Destroy(other.gameObject);
     }
+}
 }

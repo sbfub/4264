@@ -21,7 +21,7 @@ public class PistolPickUp : MonoBehaviour
 
     private void Start()
     {
-        rb.isKinematic = false;
+        rb.isKinematic = true;
 
         //Setup
         if (!equipped)
